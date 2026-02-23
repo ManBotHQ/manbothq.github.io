@@ -552,6 +552,11 @@ h1 {
     font-size: 0.9rem;
 }
 
+.footer-note {
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
 .footer-links {
     display: flex;
     gap: 4rem;
