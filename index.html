@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManBot | Local AI Agent Platform</title>
+    <meta name="description"
+        content="ManBot is a powerful, locally-hosted AI agent platform with multi-agent pipelines, DAG execution, and deep integration with your workspace.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+
+<body>
+    <section class="top-branding">
+        <div class="container text-center">
+            <img src="assets/main_header.png" alt="ManBot" class="main-brand-img">
+        </div>
+    </section>
+
+    <header class="navbar">
+        <div class="container flex-row">
+            <div class="logo-mini">
+                <span class="brand-name">ManBot</span>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">Architecture</a>
+                <a href="#dashboard">Dashboard</a>
+                <a href="#get-started" class="btn btn-primary">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content center">
+                    <div class="badge">Open Source • Local First</div>
+                    <h1>Your Personal <span class="gradient-text">AI Agent</span> Architecture</h1>
+                    <p class="subtitle max-600 center">A multi-process AI platform with type-safe IPC and
+                        capability-graph execution.
+                        Heavy tasks handled locally on your machine.</p>
+                    <div class="hero-actions center">
+                        <a href="#get-started" class="btn btn-primary btn-lg">Deploy Locally</a>
+                        <a href="https://github.com/larchanka/manbot" target="_blank"
+                            class="btn btn-secondary btn-lg">View on
+                            GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header center">
+                    <h2 class="h1">Built for Heavy Lifting</h2>
+                    <p>Unlike standard chatbots, ManBot is designed for complex tasks requiring research, multi-step
+                        execution, and deep reasoning.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="icon">🚀</div>
+                        <h3>Multi-Agent Pipeline</h3>
+                        <p>Planner → Task Memory → Executor → Critic. A sophisticated loop that ensures high-quality
+                            results for complex goals.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🕸️</div>
+                        <h3>Capability Graph (DAG)</h3>
+                        <p>Tasks are decomposed into Directed Acyclic Graphs, allowing parallel execution of LLM nodes,
+                            RAG lookups, and tools.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">📦</div>
+                        <h3>Type-Safe IPC</h3>
+                        <p>Robust multi-process architecture using JSONL over stdin/stdout with Zod-validated envelopes
+                            for absolute reliability.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🧠</div>
+                        <h3>Session-Scoped RAG</h3>
+                        <p>Smart memory management with semantic search. Prevents context leakage between tasks while
+                            maintaining persistence.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">📎</div>
+                        <h3>Deep File Ingest</h3>
+                        <p>OCR for images, Whisper for audio, and intelligent chunking for documents—all processed
+                            locally on your hardware.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">⏰</div>
+                        <h3>Intelligent Reminders</h3>
+                        <p>Natural language parsing for recurring or one-time reminders. Managed via a dedicated Cron
+                            service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="architecture bg-soft">
+            <div class="container grid-2 items-center">
+                <div class="arch-visual">
+                    <div class="notion-block card">
+                        <div class="notion-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="notion-title">system-architecture.mermaid</span>
+                        </div>
+                        <div class="notion-content">
+                            <pre><code>graph TD
+    A[Telegram] --> B[Orchestrator]
+    B --> C[Planner Agent]
+    C --> D[Capability Graph]
+    D --> E[Executor Agent]
+    E --> F[Tool Host]
+    E --> G[RAG Service]
+    E --> H[Ollama]
+    F --> I[Browser/Shell/File]</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="arch-text">
+                    <h2 class="h1">Orchestrating Intelligence</h2>
+                    <p>ManBot isn't just an LLM wrapper. It's an entire ecosystem of specialized services working in
+                        harmony.</p>
+                    <ul class="check-list">
+                        <li><strong>Planner:</strong> Decomposes complex goals into actionable DAG nodes.</li>
+                        <li><strong>Executor:</strong> Runs nodes using local tools and models.</li>
+                        <li><strong>Critic:</strong> Inspects results and triggers revisions if necessary.</li>
+                        <li><strong>Task Memory:</strong> Maintains a graph-based history of all intelligent operations.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="dashboard" class="dashboard">
+            <div class="container text-center">
+                <div class="badge primary">Monitor Everything</div>
+                <h2 class="h1 text-center">See What Your Agent Does</h2>
+                <p class="max-600 center">A clean, real-time internal dashboard for tracking tasks, system stats, and
+                    live event logs. Stay in control of your agent's reasoning.</p>
+                <div class="dashboard-preview card">
+                    <img src="assets/dashboard.png" alt="Dashboard Preview" class="rounded">
+                </div>
+            </div>
+        </section>
+
+        <section id="get-started" class="cta-section">
+            <div class="container card glass-card">
+                <h2>Ready to claim your digital twin?</h2>
+                <p>Install ManBot locally in minutes. All you need is Node.js and Ollama.</p>
+                <div class="code-block">
+                    <code>git clone https://github.com/larchanka/manbot.git<br>cd manbot<br>npm install && npm run build<br>npm run start:orchestrator</code>
+                </div>
+                <div class="cta-btns">
+                    <a href="#" class="btn btn-primary btn-lg">Documentation</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand text-center">
+                <div class="logo">ManBot</div>
+                <p>© 2026 ManBot Open Source. Privacy by design.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
