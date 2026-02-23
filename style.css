@@ -22,6 +22,10 @@
     text-align: center;
 }
 
+.rounded {
+    border-radius: var(--radius-lg);
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         --bg-primary: #09090b;
@@ -482,16 +486,19 @@ h1 {
 
 .dashboard-preview {
     margin-top: 4rem;
-    border-radius: var(--radius-lg);
+    border-radius: 2rem;
     overflow: hidden;
     box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.25);
     background: var(--bg-secondary);
-    padding: 10px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .dashboard-preview img {
     width: 100%;
     display: block;
+    border-radius: inherit;
 }
 
 /* CTA Section */
