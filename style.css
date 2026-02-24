@@ -585,8 +585,11 @@ h1 {
     font-weight: 500;
 }
 
-.footer-link:hover {
+.footer-link {
     color: var(--accent-primary);
+}
+
+.footer-link:hover {
     text-decoration: underline;
 }
 
