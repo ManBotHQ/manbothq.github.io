@@ -5,7 +5,7 @@
     --text-secondary: #666666;
     --accent-primary: #d32f2f;
     /* Mechanical Red from Gear/Eyes */
-    --accent-secondary: #a67c52;
+    --accent-secondary: #df8f3e;
     /* Aged Bronze from Robot Body */
     --accent-triple: #707070;
     /* Stone Grey from Title Text */
@@ -114,6 +114,7 @@ a {
 
 .main-brand-img {
     max-width: 500px;
+    width: 100%;
     height: auto;
     display: block;
 }
@@ -224,7 +225,7 @@ a {
 }
 
 .btn-primary:hover {
-    background-color: #4f46e5;
+    background-color: var(--accent-secondary);
     transform: translateY(-2px);
     box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
 }
@@ -513,6 +514,12 @@ h1 {
     padding: 5rem;
     text-align: center;
     border-radius: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .glass-card {
+        padding: 2rem;
+    }
 }
 
 .cta-section h2 {
