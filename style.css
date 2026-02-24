@@ -255,6 +255,7 @@ a {
 .gradient-text {
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-triple));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -271,8 +272,8 @@ a {
 }
 
 .badge.primary {
-    background: rgba(99, 102, 241, 0.1);
-    color: var(--accent-primary);
+    background: var(--accent-secondary);
+    color: var(--border-color);
 }
 
 h1 {
@@ -562,6 +563,11 @@ h1 {
 .footer-note {
     margin-top: 0.5rem;
     font-weight: 500;
+}
+
+.footer-link:hover {
+    color: var(--accent-primary);
+    text-decoration: underline;
 }
 
 .footer-links {
